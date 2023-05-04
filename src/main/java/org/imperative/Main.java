@@ -2,6 +2,7 @@ package org.imperative;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -26,13 +27,13 @@ public class Main {
         // declaretive approach : e
         persons.stream()
                 .filter(person -> (person.gender.equals(GENDER.FEMALE)))
-                .toList()
                 .forEach(female -> {
                     System.out.println(female.toString());
                 });
+
+        Predicate<Person> personPredicate = person -> person.gender.equals(GENDER.FEMALE);
         persons.stream()
-                .filter(person -> (person.gender.equals(GENDER.FEMALE)))
-                .toList()
+                .filter(personPredicate)
                 .forEach(System.out::println);
     }
 
