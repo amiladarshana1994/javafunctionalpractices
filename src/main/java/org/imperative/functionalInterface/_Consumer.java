@@ -14,7 +14,7 @@ public class _Consumer {
         //normal java function approach
         greetingCustomerFrom(amila, "Darshana");
         //BiConsumer function approach
-        greetingCustomerFromConsumer.accept(amila, "Darshana");
+        greetingCustomerFromConsumer.accept(amila, "Gayan");
     }
 
     static class Customer {
